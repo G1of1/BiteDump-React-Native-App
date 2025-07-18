@@ -4,8 +4,11 @@ import { FlatList, Image, Pressable, Text, TouchableOpacity, View } from "react-
 import { SafeAreaView } from "react-native-safe-area-context";
 import cn from 'clsx'
 import CartButton from "@/components/CartButton";
+import useAuthStore from "@/store/auth.store";
  
 export default function Index() {
+  const { user } = useAuthStore();
+  console.log(user);
   return (
     <SafeAreaView className="flex-1 bg-white">
       
