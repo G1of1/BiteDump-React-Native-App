@@ -6,8 +6,8 @@ export const appwriteConfig = {
     endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT!,
     platform: "com.jsm.bitedump",
     projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
-    databaseId: process.env.DATABASE_ID!,
-    userCollectionId: process.env.USER_COLLECTION_ID!
+    databaseId: process.env.EXPO_DATABASE_ID!,
+    userCollectionId: process.env.EXPO_USER_COLLECTION_ID!
 }
 
 
