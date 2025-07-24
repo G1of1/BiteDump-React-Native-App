@@ -4,6 +4,6 @@ import useAuthStore from '@/store/auth.store'
 
 export default function TabLayout() {
     const { isAuthenticated } = useAuthStore();
-    if(!isAuthenticated) return <Redirect href="/(auth)/SignIn" />
+    if(!isAuthenticated) return <Redirect href="/SignIn" />
   return <Slot/>
 }
