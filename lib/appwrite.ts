@@ -7,7 +7,12 @@ export const appwriteConfig = {
     platform: "com.jsm.bitedump",
     projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
     databaseId: process.env.EXPO_PUBLIC_DATABASE_ID!,
-    userCollectionId: process.env.EXPO_PUBLIC_USER_COLLECTION_ID!
+    bucketId: process.env.EXPO_PUBLIC_BUCKET_ID!,
+    userCollectionId: process.env.EXPO_PUBLIC_USER_COLLECTION_ID!,
+    categoriesCollectionId: process.env.EXPO_PUBLIC_CATEGORIES_COLLECTION_ID!,
+    menuCollectionId: process.env.EXPO_PUBLIC_MENU_COLLECTION_ID!,
+    customCollectionId: process.env.EXPO_PUBLIC_CUSTOM_COLLECTION_ID!,
+    menuCustomCollectionId: process.env.EXPO_PUBLIC_MENU_CUSTOM_COLLECTION_ID!,
 }
 
 
