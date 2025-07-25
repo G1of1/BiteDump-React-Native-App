@@ -20,6 +20,7 @@ const SignUp = () => {
 
     try {
       await createUser({name, email, password})
+      Alert.alert("Success", "User signed up successfully. Please login t")
       router.replace('/');
     }
     catch(error : any) {
@@ -57,7 +58,7 @@ const SignUp = () => {
         <CustomButton title={"Sign Up"} isLoading={isSumbitting} onPress={submit}/>
         <View className="flex justify-center mt-5 flex-row gap-2">
           <Text className="base-regular text-gray-100">Already have an account?</Text>
-          <Link href="/(auth)/SignIn" className="base-bold text-primary">Sign In</Link>
+          <Link href="/SignIn" className="base-bold text-primary">Sign In</Link>
         </View>
     </View>
   )
