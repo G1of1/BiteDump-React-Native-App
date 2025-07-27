@@ -1,5 +1,5 @@
 import { CreateUserParams, SignInParams } from "@/type";
-import { Account, Avatars, Client, Databases, ID, Query } from "react-native-appwrite"
+import { Account, Avatars, Client, Databases, ID, Query, Storage } from "react-native-appwrite"
 
 //TODO: Figure out how to access .env variables
 export const appwriteConfig = {
@@ -11,8 +11,8 @@ export const appwriteConfig = {
     userCollectionId: process.env.EXPO_PUBLIC_USER_COLLECTION_ID!,
     categoriesCollectionId: process.env.EXPO_PUBLIC_CATEGORIES_COLLECTION_ID!,
     menuCollectionId: process.env.EXPO_PUBLIC_MENU_COLLECTION_ID!,
-    customCollectionId: process.env.EXPO_PUBLIC_CUSTOM_COLLECTION_ID!,
-    menuCustomCollectionId: process.env.EXPO_PUBLIC_MENU_CUSTOM_COLLECTION_ID!,
+    customizationsCollectionId: process.env.EXPO_PUBLIC_CUSTOM_COLLECTION_ID!,
+    menuCustomizationsCollectionId: process.env.EXPO_PUBLIC_MENU_CUSTOM_COLLECTION_ID!,
 }
 
 
@@ -24,6 +24,8 @@ export const account = new Account(client)
 export const databases = new Databases(client);
 
 const avatars = new Avatars(client);
+
+export const storage = new Storage(client);
 
 export const createUser = async ({ email, password, name }: CreateUserParams) => {
     try {
